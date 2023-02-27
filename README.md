@@ -64,16 +64,6 @@ The app creates two admin users - one for InfluxDB and one for Grafana. By defau
 
 ## Database
 
-The app creates a default InfluxDB database called `db0`.
+The app creates a default InfluxDB database called `solis_telemetry`.
 
-## Data Sources
 
-The app creates a Grafana data source called `InfluxDB` that's connected to the default IndfluxDB database (e.g. `db0`).
-
-To provision additional data sources, see the Grafana [documentation](http://docs.grafana.org/administration/provisioning/#datasources) and add a config file to `./grafana-provisioning/datasources/` before starting the app.
-
-## Dashboards
-
-By default, the app does not create any Grafana dashboards. An example dashboard that's configured to work with [artillery-plugin-influxdb](https://github.com/Nordstrom/artillery-plugin-influxdb) is located at `./grafana-provisioning/dashboards/artillery.json.example`. To use this dashboard, rename it to `artillery.json`.
-
-To provision additional dashboards, see the Grafana [documentation](http://docs.grafana.org/administration/provisioning/#dashboards) and add a config file to `./grafana-provisioning/dashboards/` before starting the app.
